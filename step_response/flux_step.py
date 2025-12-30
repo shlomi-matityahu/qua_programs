@@ -1,7 +1,7 @@
 
 # %%
 import os
-os.chdir("/home/shlomimatit/Projects/hardware_measurements/step_response")
+os.chdir("/home/shlomimatit/Projects/hardware_measurements/qua_programs/step_response")
 # %%
 from qm import QuantumMachinesManager
 from lffem_configuration import *
@@ -12,7 +12,7 @@ OPX_IP = "10.1.1.11"
 
 
 
-qmm = QuantumMachinesManager(host=OPX_IP, cluster_name="carmel_gilboa")
+qmm = QuantumMachinesManager(host=OPX_IP, cluster_name="carmel_gilboa") 
 
 # %%
 
