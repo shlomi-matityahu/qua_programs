@@ -29,7 +29,7 @@ resonator_LO = 7e9
 
 const_len = 100
 # const_amp = 0.4
-const_amp = 2.0
+const_amp = 1.0
 
 gauss_len = 20
 
@@ -97,7 +97,10 @@ config: DictQuaConfig = {
                     "type": "LF",
                     "analog_outputs": {
                         1: {"offset": 0.0, 'output_mode':'amplified'},
-                        2: {"offset": 0.0, 'output_mode':'amplified'},
+                        2: {"offset": 0.0, 'output_mode':'amplified', 'filter': {
+                            'exponential': [(0.95412, 1436.547), (-0.054987, 7.765)],
+                            'exponential_dc_gain': 0.05
+                            }},
                     },
                 },
             }
